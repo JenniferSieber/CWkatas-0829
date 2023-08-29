@@ -1,7 +1,6 @@
 // 6kyu, 7kyu, 8kyu
 // KATA 1 8kyu
 // https://www.codewars.com/kata/571f1eb77e8954a812000837
-//,"This white dog has 4 legs."
 const animal = obj => `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
 
 console.log(animal({name:"dog",legs:4,color:"white"}));
@@ -39,6 +38,7 @@ const howManydays = month => {
       break;
   }
 }
+
 console.log(howManydays(3));  
 console.log(howManydays(2));  
 console.log(howManydays(11));  
@@ -47,11 +47,15 @@ console.log(howManydays(11));
 // https://www.codewars.com/kata/57216d4bcdd71175d6000560/train/javascript
 const padIt = (str, n) => {  
   while (n > 0) {
-    if (n % 2 === 0) {str = str + '*'} 
-    else  {str = '*' + str}
-    n-- 
+    if (n % 2 === 0) {
+     str = str + '*';
+    } 
+    else  {
+     str = '*' + str;
+    }
+    n--; 
     }   
-  return str 
+  return str;
 }
 
 console.log(padIt("a",1));
